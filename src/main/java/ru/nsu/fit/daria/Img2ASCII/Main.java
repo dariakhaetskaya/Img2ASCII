@@ -1,15 +1,12 @@
 package ru.nsu.fit.daria.Img2ASCII;
-import java.io.*;
 import org.apache.commons.cli.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         Options options = new Options();
         options.addOption("f", "file", true, "Input file");
         options.addOption("h", "help", false, "Help");
         CommandLineParser parser = new DefaultParser();
-        InputStream in = System.in;
-
         try {
             CommandLine line = parser.parse(options, args);
             if (line.hasOption("help")) {
