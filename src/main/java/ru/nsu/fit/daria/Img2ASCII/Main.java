@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Options options = new Options();
         options.addOption("f", "file", true, "Input file");
-        options.addOption("h", "help", true, "Help");
+        options.addOption("h", "help", false, "Help");
         CommandLineParser parser = new DefaultParser();
         InputStream in = System.in;
 
@@ -14,6 +14,7 @@ public class Main {
             CommandLine line = parser.parse(options, args);
             if (line.hasOption("help")) {
                 System.out.println("Pass this me a picture and I'll draw it for you!");
+                return;
             }
             if (line.hasOption("file")) {
                 String file = line.getOptionValue("file");
