@@ -13,7 +13,7 @@ public class Main {
         try {
             CommandLine line = parser.parse(options, args);
             if (line.hasOption("help")) {
-                System.out.println("Pass this me a picture and I'll draw it for you!");
+                System.out.println("Pass me a picture and I'll draw it for you!");
                 return;
             }
             if (line.hasOption("file")) {
